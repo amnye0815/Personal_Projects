@@ -1,7 +1,7 @@
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
 const app = express();
-const port = 8000;
+require('./routes/food.routes')(app);
 
-app.listen(port, () => console.log('Listening on port: ${port}'));
-app.use(cors());
+app.listen(8000, () => console.log('Listening on port 8000'));
+// app.use(cors());
